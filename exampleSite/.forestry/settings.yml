@@ -214,12 +214,12 @@ use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_env:
-  - HUGO_ENV=staging
+  - HUGO_ENV=development
   - HUGO_VERSION=0.58.2
   preview_output_directory: public
   preview_docker_image: forestryio/hugo:latest
   mount_path: "/srv"
   working_dir: "/srv"
   instant_preview_command: hugo server -D -E -F --port 1313 --bind 127.0.0.1 --renderToDisk
-    -d public
+    -d public --themesDir ../..
 version: 0.58.2
